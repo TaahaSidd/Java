@@ -6,7 +6,7 @@
    
 2. Main adv of arrays is huge no.of values single variable so that readability can be improved.
 
-3. The main disadv of array is its fazed in size.
+3. The main disadv of array is its fixed in size.
 
 4. Once array is created we cannot change the size.
 
@@ -75,7 +75,7 @@ These class names aren't available at programmer level
    
         eg - int[] x = new int[0];
 
-3. If we try to define the size of an array with negative value then we will get "NegativeArraySizeException
+3. If we try to define the size of an array with negative value then we will get "NegativeArraySizeException"
    
         eg - int[] x = new int[-3];
 
@@ -113,7 +113,7 @@ These class names aren't available at programmer level
 
 **Array Initialization**:
 
-1. Every array created is init by default value which is "0".
+1. Every array created is init by default value which is "0" this is only applicable for numeric arrays.
 2. We can override these default values.
    ```
    eg - int[] x = new int[6]; -> now all the elements are 0;
@@ -130,11 +130,11 @@ These class names aren't available at programmer level
 
     1-d array -> int[] x = {10,20,30};
 
-    2-d array -> int[][] x = { {10,20} , {30.40,50}};
+    2-d array -> int[][] x = { {10,20} , {30,40,50}};
 
 **length & length()** :
 
-length is a final variable applicable for arrays.
+length is a final instance variable available for every array object.
 
 length variable represents the size of the array.
 
@@ -144,7 +144,7 @@ In multidimensional arrays the length variable represent only the base size
 
         sop(x.length) => 6
 
-length() a final method applicable for string objects.
+length() is a method of the String class used to return number of characters.
 
 length() return no.of characters present in the String.
 
@@ -154,7 +154,7 @@ length() return no.of characters present in the String.
 
 **Anonymous Array** :
 
-We can declare an array without a name such type of nameless arrays are called anonymous arrays.
+Anonymous arrays are arrays created without assigning them to a reference variable.
 
 The main purpose of this array is just of instant use(1 - time usage).
 
@@ -176,3 +176,15 @@ Based on our requirements we can give the name to the array and it no longer is 
     }
 
     eg - new int[]{10,20,30}
+
+Arrays are object
+
+    eg - int[] x = new int[3];
+
+Here
+
+    1. array is created on Heap.
+    
+    2. x stores the reference.
+    
+    3. arrays inherit from Object class indirectly.
