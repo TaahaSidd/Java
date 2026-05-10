@@ -14,7 +14,7 @@ For integral data types (byte, short, int, long) we can specify literal in the f
    eg int x = 010; (literal value should be prefixed with "0")
 
 3. Hexa decimal form (base - 16) -  allowed digits are  0- 9, a to f -> for extra digits we can use both uppercase and lowercase characters.    This is one of few areas where java isnt case sensitive
-    eg int x = oX10;
+    eg int x = 0X10;
 
 By default every integral letter is "int" type but we can specify explicitly as long type by suffixed with "l" or "L".
 
@@ -43,7 +43,7 @@ We cant assign floating points literals to integrals types
             eg sop("heelo\nWorkd");
 
     \t - horizontal tab - Adds tab spacing
-          - eg sop("Name/tAge");
+          - eg sop("Name\tAge");
     
     \r - carriage return - Moves cursor to start of line
           - eg sop("hello\rHi");
