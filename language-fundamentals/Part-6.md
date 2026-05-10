@@ -81,12 +81,25 @@ These class names aren't available at programmer level
 
 4. To specify array size allowed data types are - byte, short, char, int.
 
+<br>
 
-**Arrays of Array Approach** :
+**Default Values of Arrays** :
+
+    int  = 0
+
+    boolean = false
+
+    String/Object = null
+
+    char = '\u0000' (empty unicode character)
+
+**Arrays of Array Approach (AOA)** :
 
 1. Java uses Arrays of Array approach for implementing/creation of 2-d arrays.
    
 2. One adv of the AOA approach is better memory utilization because each row can have different sizes.
+
+3. This allows the uses of Jagged Array/Ragged Array
 
 ```
     eg - int[][] arr = {
@@ -178,6 +191,8 @@ Based on our requirements we can give the name to the array and it no longer is 
     eg - new int[]{10,20,30}
 
 Arrays are object
+
+Every array in java is an object
 
     eg - int[] x = new int[3];
 
