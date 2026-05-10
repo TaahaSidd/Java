@@ -1,12 +1,12 @@
-# Part - 2 - Data Types.
+# Part - 2 & 3 - Data Types.
 
-In java every var and every expression has some type (int, double,float). 
+In java every var and every expression has some type (int, double,float).
 
 Each and every data type is clearly defined
 
 Every assignment should be checked by compiler for type compatibility
 
-because of above reasons we can conclude that java is Strongly typed programming lang. 
+because of above reasons we can conclude that java is Strongly typed programming lang.
 
 
 Java is not considered as pure object programming lang because several oops features are not satisfied by java(operator overloading, multiple inheritance etc).
@@ -60,4 +60,52 @@ Either from the files or from the network (files supported form and network form
 
     the most common used data types is int.
 
+**long** :
+
+    Size: 8 bytes(64)
+
+    Range: -2^63 to 2^63-1
     
+    long is used when int isn't enough to hold big values.
+
+    The number of char present in big file may exceed "int" range hence the written type of length method is "long". (long l = f.length())
+
+**Notes**:
+
+All the above data types (byte, short, int, long) are meant for representing integral values only. If we want to represent floating point values floating point data types.
+
+**Floating Point Data Types** :
+
+**float** :
+
+    Accuracy - if we want to 5 to 6 decimals point accuracy then we use float
+    
+    float follows Single precision
+    
+    Size: 4 bytes
+    
+    Range: -3.4e38 to 3.4e38 - 1
+
+**double**:
+    
+    Accuracy - if we want 14 to 15 decimals point accuracy then use double,
+    
+    double follows double precision
+
+    Size: 8 bytes
+
+    Range: -1.7e38 to 1.7e38 -1
+
+
+**boolean**:
+
+    Size: Not Applicable in java it depends on the virtual machine dependency.
+
+    Range: Not applicable, but allowed values are true/false
+
+**char**:
+
+    old languages are ascii code based under the number of diff allowed different ascii code characters are less than or equal to 256. TO represent 256 characters 8 bits (1 byte) is enough. hence the size of char in old languages are 1 bit.
+    But java is Unicode based, and the number of different Unicode characters are greater than 256 and less than or equal to 65536 to represent this many characters 8 bits may not enough. Then we should go for 16bits (2bytes)
+
+    Range: 0 to 65535
