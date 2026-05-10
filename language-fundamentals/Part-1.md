@@ -1,4 +1,4 @@
-# Part - 1 Language Fundamentals 
+# Part - 1 Language Fundamentals
 
 A name in java program is called identifier which can be used for identification purposes.
     It can be method name, class name, variable name and label name (MVCL).
@@ -124,7 +124,7 @@ Keywords for flow control - (11)
 
 Keywords for modifiers -(11)
 
-    public 
+    public
     private
     protected
     static
