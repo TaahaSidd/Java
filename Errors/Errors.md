@@ -6,3 +6,6 @@ PLP - Possible loss of precision.
 
     eg - int x = 10L;
 
+Null Pointer Exception
+
+    Any operations performed with null with result in (NPE)
