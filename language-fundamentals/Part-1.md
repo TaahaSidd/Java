@@ -86,7 +86,7 @@ which of the following are valid java identifiers
 
 In java some words are reserved to represent some meaning and functionality such words are called reserved words.
 
-![alt text](image.png)
+![alt text](ReservedKeywords.png)
 
 1. goto - usage of goto created several problem in old languages and hence some people banned this keyword in java.
 2. const - use of final instead const.
