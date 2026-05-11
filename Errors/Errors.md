@@ -16,7 +16,7 @@
 
     This is caused when an negative value is passed as size for arrays
     
-    This is an RunTimeException
+    This is a RunTimeException
     
         eg = int[] x = new int[-5];
 
@@ -27,3 +27,10 @@
         eg = int[] x = new int[3];
             
             sop(x[5]) -> This will cause the error to come.
+
+**NoSuchMethodError**
+
+    This is caused when JVM tries to call a method that was available during compilation but cannot find at runtime.
+
+    This is a RunTimeError.
+
