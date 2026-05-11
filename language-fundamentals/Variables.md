@@ -196,7 +196,7 @@ A - No, because static belongs to class level, while local variables belong to m
 
 For Instance and Static variables JVM will provide default values, and we are not required to init but for local variables JVM wont provide default values so we should perform init before using the variable.
 
-IV and SV can be accessed by multiple threads simultaneously and hence these are not threat safe, but in the case of local variable for every thread a separate copy will be created and hence LV are generally thread-safe because each thread gets its own separate copy stored in stack memory.
+IV and SV can be accessed by multiple threads simultaneously and hence these are not thread safe, but in the case of local variable for every thread a separate copy will be created and hence LV are generally thread-safe because each thread gets its own separate copy stored in stack memory.
 
 ![alt text](ThreadSafety.png)
 
