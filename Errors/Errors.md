@@ -34,3 +34,10 @@
 
     This is a RunTimeError.
 
+**Arithmetic Exception**
+
+    This is a runtime exception.
+
+    It is only possible only in integral arithmetic but in floating point arithmetic.
+
+    The only operators which can cause this exception are : "/" & "%".
