@@ -77,7 +77,7 @@ Until 1.6v if the class dosent contain main() then we will get runtime exception
     eg - Main method not found in class test, please define main method as
                 public static void main(String[] args)
 
-From 1.7v onwards main() is mandatory to star the program execution hence even though class contain static block it wont be executed if the class doesn't contain main()
+From 1.7v onwards main() is mandatory to start the program execution hence even though class contain static block it wont be executed if the class doesn't contain main()
 
 **Important Question**
 
