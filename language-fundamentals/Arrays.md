@@ -113,7 +113,7 @@ These class names aren't available at programmer level
 
 **Memory structure and Java Code**
 
-![alt text](MemoRepresentation.png)
+![alt text](../Images/MemoRepresentation.png)
 
 ```
     int [][] x = new int[2][];
