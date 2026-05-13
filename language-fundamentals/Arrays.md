@@ -61,7 +61,7 @@
 
 **Array & its Class names** :
 
-![alt text](Array-Class.png)
+![alt text](../Images/Array-Class.png)
 
 These class names aren't available at programmer level
 
