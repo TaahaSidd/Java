@@ -1,11 +1,11 @@
 # Part - 16 - Java Coding Standards
 
-When ever we are writing java code it is highly recommended to follow coding standards, whenever we are writing any component its name should refrect the purpose of the components(Functionality) the main adv of this approach is readability and mailability
+When ever we are writing java code it is highly recommended to follow coding standards, whenever we are writing any component its name should .reflect the purpose of the components(Functionality) the main adv of this approach is readability and mailability
 
 **Coding Standard for Classes** :
 
 1. Usually class names are nouns
-2. it should start with uppercase character and if it contains multiple words every inner word should start with uppercase character 
+2. it should start with uppercase character and if it contains multiple words every inner word should start with uppercase character
 
     eg - StringBuffer
 
@@ -37,7 +37,7 @@ When ever we are writing java code it is highly recommended to follow coding sta
 **Coding Standards for Java Bean** :
 
 1. A java bean is a simple java class with private properties under public getter and setters.
-```   
+```
    eg - public Class StudentBean{
             private String name;
 

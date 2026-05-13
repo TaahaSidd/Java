@@ -1,5 +1,7 @@
 # Part 13, 14 & 15 - Main() method & Command Line Arguments
 
+main() is the entry point of any java standalone application.
+
 Wether class contains main() or not and whether main() is declared to requirement or not these things wont be checked by compiler. This is the responsibility of JVM, if JVM isn't able to find these then we get runtime exception -> NoSuchMethodError : main
 
 At runtime JVM always searches for main() with the following prototype;
@@ -18,7 +20,7 @@ We can declare main() with the following modifiers
 
 1. final
 2. synchronized
-3. stricfp
+3. strictfp
 
 ```
 eg - Class test{
@@ -35,11 +37,11 @@ Overloading of the main() is possible but JVM will always call String array argu
 
         public static void main(String[] args){
             
-            Sop("String[]")'
+            Sop("String[]");
         
         }
 
-        public static void main(String[] args){
+        public static void main(int[] args){
 
             Sop("int[]");
 
@@ -47,6 +49,7 @@ Overloading of the main() is possible but JVM will always call String array argu
     }
 
 OUTPUT -> String[]
+
 ```
 Inheritance concept applicable for main method hence while executing child class if it doesn't contain main() then parent class main() will be executed
 
