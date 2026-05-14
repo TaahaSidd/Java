@@ -14,14 +14,14 @@
         int y = ++10; -> this is invalid and it will result in compile time error (unexpected type).
 
         int x = 10;
-        int y = ++ (++x) -> this is also invalid as (++x) will become 11 and it will result in compile time error.
+        int y = ++ (++x) -> Nesting of increment/decrement operators is not allowed because increment operators can be applied only to variables, but (++x) returns a value and not a variable.
 
 ```
 2. Nesting of increment and decrement operators are not allowed.
    
 ```
    eg - int x = 10;
-        int y = ++ (++x) -> this is invalid as (++x) will become 11 and it will result in compile time error.
+        int y = ++ (++x) -> Nesting of increment/decrement operators is not allowed because increment operators can be applied only to variables, but (++x) returns a value and not a variable.
 
 ```
 
@@ -38,7 +38,7 @@
 
 1. If we apply any AO between two variables a & b the result type is always max(int,type of a, type of)
 
-2. In integral arithmetic mathematics (byte short int long) theres no way to represent undefined result hence if a result is defined we will runtime exception saying
+2. In Integral arithmetic, division by zero is not allowed and causes Runtime Exception(ArithmeticException). However, overflow conditions do not cause exceptions in java.
 
 **String concatenation operator (+)** :
 
@@ -98,7 +98,7 @@ In general we can EO for reference comparison (address comparison) and .equals()
 ```
 syntax :
 
-        r instance of x
+        r instanceof x
 
         here r is object reference, x is class/interface name
 ```
@@ -233,7 +233,7 @@ There are three types of assigment operators
 
 2. Chained Assignment.
 
-   eg - a = b c = d = 10;
+   eg - a = b = c = d = 10;
 
 3. Compound Assignment.
 
