@@ -13,7 +13,7 @@ Java is not considered as pure object programming lang because several oops feat
 Moreover we are depending on primitive data types which are non objects.
 
 
-![alt text](PrimitiveDataTypes.png)
+![alt text](../Images/PrimitiveDataTypes.png)
 
 Except boolean and char all other data types are considered as Signed Data types. Because we can represent both positive and negative numbers.
 
