@@ -2,6 +2,8 @@
 
 **Operators & Assignments** :
 
+**Operators** are special symbols or keywords that tell the compiler to perform specific mathematical, logical or relational operations on variables and values called **operands**
+
 1. We can apply increment and decrement operates only on variables but not on constant values.
 
 ```
