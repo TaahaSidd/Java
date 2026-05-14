@@ -34,7 +34,7 @@
 ```
 4. We can apply increment and decrement operators to every primitive types except boolean.
 
-**Athematic operators** (+, -, *, /, %) :
+**Arithmetic operators** (+, -, *, /, %) :
 
 1. If we apply any AO between two variables a & b the result type is always max(int,type of a, type of)
 
@@ -42,7 +42,7 @@
 
 **String concatenation operator (+)** :
 
-1. The only overloaded operator in java is (+) sometime it act as arithmetic addition operator and sometime it acts string concatenation operator
+1. The only overloaded operator in java is + operator sometimes it act as arithmetic addition operator and sometime it acts string concatenation operator.
 
 2. If at least one arguments is string type then (+) acts as concatenation operator and if both arguments are number type then (+) acts as arithmetic addition operator.
 
@@ -50,7 +50,7 @@
     String a = "durga"
     int b = 10, c = 20, d = 30;
 
-    sop(a + b + c + d) -> output = durga10203040
+    sop(a + b + c + d) -> output = durga102030
     sop(b + c + d + a) -> output = 60durga
     sop(b + c + a + d) -> output = 30durga30
     sop(b + a + c + d) -> output = 10durga2030
@@ -59,19 +59,20 @@
 
 1. We can apply relation operator to every primitive data type except boolean
 2. We cant apply relational operators to objects types.
-   
+```
    eg - Sop("durga12" > "durga") -> this will result in error "operator > cannot be applied to String.
-
-3. Nesting of relational operators are not allowed.
-   
+```
+4. Nesting of relational operators are not allowed.
+```
    eg - Sop(10 < 20 < 30) -> Error -> "operator cannot be applied to boolean, int"
-
+```
 **Equality Operators** (==, !=) :
 
 1. We can apply EO for every primitive types including boolean
+```
    eg - Sop(false == false) - Output -> true.
-
-2. We can apply EO for objects types also, for objects. If both ref var are pointing to the same object then only EO will give true.
+```
+2. We can apply EO for objects types also, for objects. If both reference variables are pointing to the same object then only EO will give true.
         ![alt text](/Images/EOCompatiablity.png)
 
 3. If we apply EO for objects types then compulsory there should be some relation between qrguuments types (either child to parent, parent to child or same type) otherwise we will get compile time errors.
@@ -134,9 +135,11 @@ eg -
 
 ```
 We can use bitwise operators for integral data types also.
+```
         eg - Sop(4 & 5) - Output -> 4
              Sop(4 | 5) - Output -> 5
              Sop(4 ^ 5) - Output -> 1
+```
 
 **Bitwise complement operator (~)** :
 
@@ -144,10 +147,10 @@ We can use bitwise operators for integral data types also.
 
 **Boolean complement operator (!)** :
 1. We can apply this operator only for boolean types but not for integral types.
-
+```
    eg - Sop(!4); -> Error - operator ! cannot be applied to int
         Sop(!false) -> True - this is valid.
-
+```
 **Short-Circuit Operators (&& , ||)** :
 
 1. These are exactly same as Bitwise operators (&, |) except the following diff
@@ -155,7 +158,7 @@ We can use bitwise operators for integral data types also.
 **Diff between (&, |) and (&&,||)** :
 
 **(&, |)** :
-1. Both arguments should be valued always.
+1. Both arguments will be evaluated.
 2. Performance is low.
 3. Applicable for both boolean and integral types.
 
@@ -169,7 +172,7 @@ We can use bitwise operators for integral data types also.
 2. x || y =  *y* will be evaluated if *x* is false i.e if *x* is true then *y* wont be evaluated.
 
 **Examples** :-
-
+```
 int x = 10;
 
 if(++x < 10 && (x/0 > 10)){
@@ -179,7 +182,8 @@ else{
         Sop("Hi");
 }
 
-Output will be hi. *because we are using && operator and in this case the first arguments is false hence second argument will be skipped and from else block hi will be printed. and if we use & instead of && we will get hello from if block because & checks both the arguments no matter if 1st is false.*
+Output will be hi. *because we are using && operator and in this case the first arguments is false hence second argument will be skipped and from else block hi will be printed. and if we use & both conditions will be evaluated and the program will result in Runtime Exception -> ArithmeticException : / by zero*
+```
 
 **Type-case operator** :
 
@@ -209,23 +213,25 @@ eg 2 -
 2. Whenever we are assigning bigger data type value to smaller data type variable then explicitly type is required.
 3. Also known ass narrowing or downcasing.
 4. there maybe a chance of loss of information.
-5. When ever we are assigning bigger data types value to smaller data type variable by EC the MSB will lost we to consider only LSB.
+5. During explicity narrowing conversion, JVM keeps only least significant bits(LSB) and discards remaining higher bits.
 
 ```
 eg 1 -
         int x = 130;
         byte b = x;
-        Sop(b); Output -> Error (PLP)
+        Sop(b); Output -> Error Compile time error - possible lossy conversion from int to byte
 
 eg 2 -
         int x = 130;
         byte b = (byte) x;
         Sop(b); Output -> -126
 
+Here the output is -126 because JVM keeps only least significant 8 bits.
+
 ```
 
 **Assignment Operators** :
-There are three types of assigment operators
+There are three types of assignment operators
 
 1. Simple Assignment.
 
@@ -240,26 +246,27 @@ There are three types of assigment operators
 **Chained Assignment**
 
 1. We cannot perform chained assignments directly at the time of declaration.
-
+```
         eg -
         int a,b,c,d;
         a=b=c=d=20; -> this is valid
 
-        int a=b=c=d=20; -> this is invalid and compiler will error (cannot find variable), the reason beacuase we are declare only "a" variable rest aren't declared.
+        int a=b=c=d=20; -> this is invalid and compiler will give error (cannot find variable), the reason because we are declaring only "a" variable rest aren't declared.
 
         int b,c,d;
-        int a=b=c=d=20; -> this is valid because here we are declaring every variable.
-
+        int b=c=d=20; -> this is valid because here we are declaring every variable.
+```
 **Compound Assignment**
 1. Assignment operator mixed with some other operator such type of assignment operators are called Compound operators
-        
+```
         eg -
         int a = 10;
         a += 20;
 
         Sop(a) -> Output - 30
+```
 
-2. Following are possible CA operators in java:
+1. Following are possible CA operators in java:
 
 ```
    eg -
@@ -282,20 +289,22 @@ There are three types of assigment operators
 
 **Conditional Operator** :
 1. the only possible ternary operator in java is CO (? :)
-   
+```   
    syntax
         int x = (10 < 20) ? 30 : 40 -> OUTPUT - 30
-2. We can perform nesting of CO also.
+```
 
+2. We can perform nesting of CO also.
+```
    eg - int x = (10 > 20) ? 30 : ((40 > 50) ? 60 : 70);
    Sop(x) -> OUTPUT - 70
-
+```
 **New Operator** :
 
-1. We can New operator to create object 
-
+1. We can use new operator to create objects.
+```
    eg - Test t = new Test(); here new operator is used to create an objet.
-
+```
 2. After creating an object constructor will be executed to perform init of the object hence constructor is not for creation object and it is only for init of an object
 
 3. In java we have only new keyword but not delete keyword because destruction of objects is the responsibility of JVM garbage collector
@@ -316,6 +325,10 @@ There are three types of assigment operators
 3. shift operators
 
    >>, >>>, <<
+
+4. Relational operators
+
+   <, <=, >, >=,
 
 4. equality operators
 
