@@ -36,7 +36,7 @@
 
 **Arithmetic operators** (+, -, *, /, %) :
 
-1. If we apply any AO between two variables a & b the result type is always max(int,type of a, type of)
+1. If we apply any AO between two variables a & b the result type is always max(int,type of a, type of b)
 
 2. In Integral arithmetic, division by zero is not allowed and causes Runtime Exception(ArithmeticException). However, overflow conditions do not cause exceptions in java.
 
@@ -235,7 +235,7 @@ There are three types of assignment operators
 
 1. Simple Assignment.
 
-   eg - int x = 10; here = is the operator 
+   eg - int x = 10; here = is the operator
 
 2. Chained Assignment.
 
@@ -288,8 +288,8 @@ There are three types of assignment operators
 ```
 
 **Conditional Operator** :
-1. the only possible ternary operator in java is CO (? :)
-```   
+1. The only possible ternary operator in java is CO (? :)
+```
    syntax
         int x = (10 < 20) ? 30 : 40 -> OUTPUT - 30
 ```
@@ -299,6 +299,7 @@ There are three types of assignment operators
    eg - int x = (10 > 20) ? 30 : ((40 > 50) ? 60 : 70);
    Sop(x) -> OUTPUT - 70
 ```
+
 **New Operator** :
 
 1. We can use new operator to create objects.
@@ -356,6 +357,7 @@ There are three types of assignment operators
 ```
 
 **Evaluation order of java operands**
+
 1. In java we have only operator precedence but not operands precedence before applying any operator all operands will be evaluated from (left to right)
 
 ```
