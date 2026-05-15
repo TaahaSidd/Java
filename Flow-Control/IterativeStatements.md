@@ -4,7 +4,7 @@
 
 **while()**
 
-1. If we don't know the number of iteration in advance then we should go for while() loop 
+1. If we don't know the number of iteration in advance then we should go for while() loop.
 
 ```
 syntax -
@@ -68,7 +68,7 @@ eg -
 1. if we want to execute loop body at least once then we should go for do-while.
 
 ```
-syntax - 
+syntax -
     do{
         body
     }while(condition);
@@ -166,13 +166,14 @@ eg -
            Hi
            Hi
            Hi
+
 ```
 
 **Notes**:
 
 All three parts of for loop are independent of each other and optional
 ```
-eg - 
+eg -
     for(; ;){
         Sop("Hello");
     }
