@@ -58,7 +58,7 @@ if(true){
 
 ```
 
-**Note**: 
+**Note**:
 
 Theres no dangling else problem in java, every else is mapped to the nearest if statement
 
@@ -97,13 +97,13 @@ switch(x){
 
 ```
 
-2. The allowed arguments types for if statements are - byte, short, char, int until 1.4v but 1.5v onwards corresponding Wrapper classes and enum type are also allowed. From 1.7v onwards String type is also allowed 
+2. The allowed arguments types for if statements are - byte, short, char, int until 1.4v but 1.5v onwards corresponding Wrapper classes and enum type are also allowed. From 1.7v onwards String type is also allowed.
 
 ![alt text](../Images/DataTypes-If-Else.png)
 
-3. Curly braces are mandatory, except switch everywhere curly braces are optional
+3. Curly braces are mandatory, except switch everywhere curly braces are optional.
 
-4. Both case and default are optional, that is empty switch statment is valid java syntax
+4. Both case and default are optional, that is empty switch statement is valid java syntax.
 
 ```
 eg -
@@ -115,7 +115,7 @@ eg -
 
 ```
 
-5. Inside switch every statement should be under case or default i.e independent statements are not allowed in switch otherwise we wil get compile time error
+5. Inside switch every statement should be under case or default i.e independent statements are not allowed in switch otherwise we wil get compile time error.
 ```
 eg -
 
