@@ -231,15 +231,19 @@ syntax - public Iterator iterator()
 2. We can use this to retrieve elements of collection one by one.
 3. It comes under java.util package.
 4. It contains three methods:
+```
    
    eg - hasNext()
         next()
         remove()
+
+```
 
 **Iterable()**
 1. It is related to for-each loop.
 2. The target element in for-each loop should be iterable.
 3. it comes under java.lang package.
 4. It contains only 1 method:
-   
+```
    eg - iterator()
+```
