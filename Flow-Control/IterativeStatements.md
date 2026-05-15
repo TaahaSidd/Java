@@ -178,7 +178,7 @@ eg -
         Sop("Hello");
     }
 
-    for(; ; ); 
+    for(; ; );
 
 Both of these loops are valid and they are infinite loops.
 ```
