@@ -66,7 +66,7 @@ Theres no dangling else problem in java, every else is mapped to the nearest if 
     if(true)
         if(true)
             Sop("Hello");
-    else() -> this belong the the nearest if.
+    else -> this belong the the nearest if.
         Sop("Hello");
 
 ```
@@ -97,7 +97,7 @@ switch(x){
 
 ```
 
-2. The allowed arguments types for if statements are - byte, short, char, int until 1.4v but 1.5v onwards corresponding Wrapper classes and enum type are also allowed. From 1.7v onwards String type is also allowed.
+2. The allowed arguments types for switch statements are - byte, short, char, int until 1.4v but 1.5v onwards corresponding Wrapper classes and enum type are also allowed. From 1.7v onwards String type is also allowed.
 
 ![alt text](../Images/DataTypes-If-Else.png)
 
@@ -152,7 +152,7 @@ eg -
     case 10:
         Sop(10);
         break;
-    case 10 + 20 + 30 + 40
+    case 10 + 20 + 30 + 40:
         Sop(60);
   }
 
@@ -191,10 +191,43 @@ eg -
         Sop(99);
         break;
     case 'a':  -> INVALID - (Duplicate case label)
-        Sop(a);
+        Sop('a');
   }
 
 ```
 10. Within the switch if any case is matched from that case onwards all statements will be executed until break or end of the switch this is called fall through. the main adv of this is we can define common actions for multiple cases (code reusability).
 
-11. Within the switch we can default case at most once, default case will be executed if and only if there's no case matched. within the switch we can write default case anywhere but its recommended to write it as last case.
+11. Within the switch we can default case at most once, default executes only when no case matches but execution can still enter default through fall-through if previous case has no break. Within the switch we can write default case anywhere but its recommended to write it as last case.
+
+12. break terminates switch immediately without break execution continues into next cases which is called fall-through.
+
+**Modern switch enhancements** :
+1. Java 14 introduced switch expressions.
+```
+eg -
+    int day = 2;
+
+    String result = switch(day){
+        case 1 -> "Monday";
+        case2 -> "Tuesday";
+        default -> "Invalid";
+    }
+```
+
+1. Benefits of this enhanced switch are clearer syntax, no fall through by default and can return values directly
+
+
+**Diff b/w if-else and switch** :
+
+**if-else**:
+1. It is best for ranges and complex conditions.
+2. it supports relational and logical operators.
+
+**switch** :
+1. It is best for equality-based multiple options.
+2. Helps in improving readability.
+
+```
+eg - if(age > 20) -> This cannot be done directly in traditional switch.
+
+```
