@@ -24,7 +24,9 @@
 5. assert
 
 
-**Selection Statements**
+**Selection Statements** :
+
+Used to choose between different paths of execution based on specific conditions
 
 **if-else**
 ```
@@ -202,6 +204,7 @@ eg -
 12. break terminates switch immediately without break execution continues into next cases which is called fall-through.
 
 **Modern switch enhancements** :
+
 1. Java 14 introduced switch expressions.
 ```
 eg -
@@ -214,7 +217,7 @@ eg -
     }
 ```
 
-1. Benefits of this enhanced switch are clearer syntax, no fall through by default and can return values directly
+2. Benefits of this enhanced switch are clearer syntax, no fall through by default and can return values directly
 
 
 **Diff b/w if-else and switch** :
