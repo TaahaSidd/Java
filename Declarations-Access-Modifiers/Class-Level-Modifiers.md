@@ -2,14 +2,14 @@
 
 **Class level modifiers** :
 
-1. Whenever we are writing our own classes we have to provide some information about our class to the JVM like
+1. Whenever we are writing our own classes we have to provide some information about our class to the JVM like.
 
 ```
     a. Whether this class can be accessible from anywhere or not.
-    b. Whether child class creation is possible or not
+    b. Whether child class creation is possible or not.
     c. whether object creation is possible or not.
 ```
-2. We can specify this information by using appropriate modifiers
+2. We can specify this information by using appropriate modifiers.
 
 3. The only applicable modifiers for top-level classes are:
 
@@ -32,7 +32,7 @@ But for inner class the applicable modifiers are:
     g. protected
     h. static
 ```
-4. If we try to any non applicable modifiers on top-level classes we will get error
+4. If we try to any non applicable modifiers on top-level classes we will get error.
 
 ```
     private class Test{
@@ -49,7 +49,7 @@ But for inner class the applicable modifiers are:
 
 public, private, protected, default are considered as specifiers except these remaining are considered as modifiers. But this rule is only applicable for old languages like C++ but not in java.
 
-In java all are considered as modifiers only theres no word like specifiers
+In java all are considered as modifiers only theres no word like specifiers.
 
 **Public Classes** :
 
@@ -92,6 +92,7 @@ eg -
 
     1. Whatever method parent has by default it is available to child by inheritance if the child is not satisfied with parent method implementation then child is allowed to redefine the method based on its requirement this process is called overriding.
     2. If the parent class method is declared as final then we cant over ride the method in child class because its implementation is final.
+    
     ```
         eg -  class P {
             public void Property(){
@@ -116,6 +117,7 @@ eg -
 
     1. If a class declared as final we cant extend the functionality of that class i.e we cant create child class for that class.
     2. Inheritance and polymorphism is not possible for final classes.
+    
     ```
         eg - final class P{
 
@@ -144,9 +146,10 @@ eg -
 
         } -> INVALID
     ```
-    2. Child class is responsible to provide implementation for parent class abstract methods
+    2. Child class is responsible to provide implementation for parent class abstract methods.
     3. By declaring abstract method in parent class we can provide guidelines to child classes such that which methods are compulsory child has to implement.
     4. Abstract method never talks about implementation if any modifiers talk about implementation then it forms illegal combination with abstract modifiers, the following are illegal combinations of modifiers for method with respect to abstract.
+    
     ```
     eg -
         final
@@ -155,20 +158,22 @@ eg -
         private
         strictfp
 
-        all of these modifiers cannot be used with abstract. and if we try to use them with abstract we will get Compile time error -> illegal combination of modifier/
+        all of these modifiers cannot be used with abstract. and if we try to use them with abstract we will get Compile time error -> illegal combination of modifier.
     ```
 
     **Abstract Class** :
+    
     1. For any java class if we are not allowed to create an object (partial implementation) such type of class we have to declare with abstract modifier.
     2. For abstract classes instantiation is not possible.
 
     **Abstract class VS Abstract method** :
+
     1. If a class contains al least one abstract method then compulsory we should declare class as abstract otherwise we will get compile time error.
-       
-       **Reason** - IF a class contains at least 1 abstract method then implementation is not complete and hence it is not recommended to create object, to restrict object 
-       instantiation compulsory we should declare class as abstract
+        
+         **Reason** - IF a class contains at least 1 abstract method then implementation is not complete and hence it is not recommended to create object, to restrict object instantiation compulsory we should declare class as abstract.
+    
     2. Even though class doesn't contain any abstract method still we can declare class as abstract if we don't want instantiation i.e abstract class can contain 0 number of abstract methods also.
-    3. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to delcare child class as abstract
+    3. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to declare child class as abstract.
 
 **Final VS Abstract** :
 
