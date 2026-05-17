@@ -27,7 +27,7 @@ Except boolean and char all other data types are considered as Signed Data types
     
     Range: -128 to 127
 
-![alt text](byteRepresentation.png)
+![alt text](../Images/byteRepresentation.png)
 
 The most significant bit (MSB) acts as sign bit.
 
