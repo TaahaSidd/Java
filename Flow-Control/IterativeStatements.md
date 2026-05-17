@@ -2,6 +2,9 @@
 
 **Iterative Statements**
 
+1. Commonly known as Loops.
+2. It allows us to execute a block of code repeatedly as long as a specified condition remains true.
+
 **while()**
 
 1. If we don't know the number of iteration in advance then we should go for while() loop.
@@ -23,7 +26,7 @@ here the argument (1) passed will result in a error -> incompatible types found:
 3. Curly braces are optional and without them we can take only 1 statement under while which should not be declarative statement.
 ```
 while(true)
-    Sop(Hello); -> VALID
+    Sop("Hello"); -> VALID
 
 while(true); -> VALID
     
@@ -36,7 +39,8 @@ while(true){ -> VALID
 ```
 
 **Note**
-1. Every final variable will be replaced by the value at compile time only
+1. Every final variable will be replaced by the value at compile time only.
+
 ```
 eg -
     final int a = 10;
@@ -47,7 +51,9 @@ eg -
 
 After compilation the Sop(10), Sop(b)
 ```
+
 2. If every argument is a final variable(compile time constant) then operation should be performed at compile time only.
+
 ```
 eg -
     final int a = 10, b = 20;
@@ -59,13 +65,19 @@ eg -
 
     Sop(a < b); At compile time -> Sop(true)
     
-    Sop(a > b); At compile time -> Sop(10 < c)
+    Sop(a > c); At compile time -> Sop(10 > c)
 
+```
+3. This will result in a infinite while loop.
+
+```
+    while(true);
 ```
 
 **do-while()** :
 
-1. if we want to execute loop body at least once then we should go for do-while.
+1. If we want to execute loop body at least once then we should go for do-while.
+2. It is an exit controlled loop, meaning it executes the block of codes first and then check the conditions at the end.
 
 ```
 syntax -
@@ -75,7 +87,9 @@ syntax -
 
 ; -> is mandatory, and condition should be boolean type
 ```
-2. Curly braces are optional and without them we can take only one statement between **do** and **while** which should not be declarative statement
+
+3. Curly braces are optional and without them we can take only one statement between **do** and **while** which should not be declarative statement
+
 ```
 do
     Sop("hello"); -> VALID
@@ -97,9 +111,22 @@ while(true); -> INVALID
 
 ```
 
+**Difference b/w while and do-while** :
+
+**while** :
+1. Condition checked before body execution.
+2. Body may execute zero times.
+
+**do-while** :
+1. Condition checked after body execution.
+2. Body executes at least once.
+
+
 **for-loop** :
+
 1. For loop is the most commonly used loop in java
 2. If we know number of iteration in advance then for loop is the best choice
+
 ```
 syntax -
     for(initialization; condition; update){
@@ -107,22 +134,25 @@ syntax -
     }
 ```
 3. Curly braces are optional and without curly braces we can take only 1 statement under for loop, which should not be declarative statement
+
 ```
-for(int i = 0; i < 0; i++) -> VALID
+for(int i = 0; i < 3; i++) -> VALID
     Sop("Hello");
 
-for(int i = 0; i < 0; i++); -> VALID
+for(int i = 0; i < 3; i++); -> VALID
 
-for(int i = 0; i < 0; i++) -> INVALID
+for(int i = 0; i < 3; i++) -> INVALID
     int x = 10;
 
 ```
 **Initialization Section** :
+
 1. This part will be executed only once in loop life cycle
 2. Here we can declare and init local variables of for loop
 3. Here we can declare any numbers of variables but they should be for the same type. If any diff data type variable is declared then we will get Compile time error.
+
 ```
-eg - 
+eg -
     int i = 0, j = 0; -> VALID
 
     int i = 0; String s = "durga"; -> INVALID
@@ -130,8 +160,9 @@ eg -
     int i = 0, int j = 0; -> INVALID
 ```
 4. in the init section we can take any valid java statement including System.out.print.
+
 ```
-eg - 
+eg -
     int i = 0;
     for(Sop("Hello"); i <3; i++){
         Sop("Hi");
@@ -144,8 +175,10 @@ eg -
 ```
 
 **Conditional Check** :
+
 1. Here we can take any valid java expression but should be boolean type.
-2. This part is optional and if we are not taking anything then compiler will always place "true"/
+2. This part is optional and if condition section is omitted, it behaves as if condition is always true.
+
 ```
 eg -
     for(int i = 0; ; i++){
@@ -154,7 +187,9 @@ eg -
 ```
 
 **Increment or Decrement Section** :
+
 1. In this section we can take any valid java expression including System.out.print
+
 ```
 eg -
     int i = 0;
@@ -172,6 +207,7 @@ eg -
 **Notes**:
 
 All three parts of for loop are independent of each other and optional
+
 ```
 eg -
     for(; ;){
@@ -184,9 +220,10 @@ Both of these loops are valid and they are infinite loops.
 ```
 
 **for-each loop(enhanced for loop)** :
-1. Introduced in 1.5v
-2. It is specially designed loop for retrieve elements of arrays and collections
-3. To print elements of 1-d array:
+
+1. Introduced in 1.5v.
+2. It is specially designed loop for retrieve elements from arrays and collections.
+3. To print elements of 1-d array.
 
 ```
 int[] x = {10,20,30}
@@ -195,7 +232,7 @@ for(int x1 : x){
     Sop(x1);
 }
 ```
-4. To print elements of 2-d array
+4. To print elements of 2-d array.
 
 ```
 int[][] x = {{10,20,30} ,{40,50}}
@@ -206,41 +243,47 @@ for(int[] x1 : x){
     }
 }
 ```
-5. For each loop is the best choice to retrieve elements of arrays and collections but its limitations is it is applicable for array and collection and its not a general purpose loop.
+5. For each loop is the best choice to retrieve elements from arrays and collections but its limitations is it is applicable for array and collection and its not a general purpose loop.
 6. By using normal for loop we can print array elements either in original order or in reverse order but by using for each loop we can print array elements only in original order.
 
 **Iterable(I)** :
+
+It is a root interface of the java collections framework that represents a collection of elements that can be traversed sequentially.
+
 ```
 syntax -
-    for(eachitem x : target){
+    for(each item x : target){
 
     }
 ```
 1. The target element in for-each loop should be iterable object.
 2. An object is said to be iterable if and only if corresponding class implements java.lang.iterable(I)
-3. iterable(I) it was introduced in 1.5v and it contains only 1 method Iterator
+3. iterable(I) it was introduced in 1.5v and it contains only 1 method Iterator.
+
 ```
-syntax - public Iterator iterator()
+syntax - Iterator iterator()
 ```
-4. All array related classes and collection implemented classes already implements iterable(I) being a programmer we are not req to do anything. we should be just aware of this.
+
+4. Collection classes implement iterable interface, which enables for-each loop support. Arrays are specially supported by the java language even though they do not implement iterable.
 
 
 **Diff b/w Iterator(I) & Iterable(I)** :
 
 **Iterator**
+
 1. It is related to collections
 2. We can use this to retrieve elements of collection one by one.
 3. It comes under java.util package.
 4. It contains three methods:
+
 ```
-   
    eg - hasNext()
         next()
         remove()
-
 ```
 
 **Iterable()**
+
 1. It is related to for-each loop.
 2. The target element in for-each loop should be iterable.
 3. it comes under java.lang package.
