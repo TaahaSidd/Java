@@ -37,7 +37,7 @@ Zero means positive number, 1 means negative number. Positive numbers will be re
 
 <br>
 
-![alt text](PLP.png)
+![alt text](../Images/PLP.png)
 
 Byte is the best choice if we want to handle data in terms of streams.
 Either from the files or from the network (files supported form and network form is the byte ).
