@@ -80,8 +80,6 @@ abstract strictfp void m1(); -> INVALID Compile time error - illegal combination
             
             A a1 = new C();
             a1.m1(); -> INVALID - m1 has protected access in pack1.A
-
-
         }
     }
     ```
