@@ -121,6 +121,7 @@ class test implements left,right{
     }
 }
 ```
+
 2. If two interface contains a method with same name but different argument types then in the implementation class we have to provide implementation for both methods and these methods acts overloaded methods.
 
 ```
@@ -155,7 +156,7 @@ interface Right{
 
 **Interface variable naming conflicts** :
 
-1. Two interfaces can contain a variable with the same name and there maybe a chance of variable naming conflicts but we can solve this problem by using interface names.
+Two interfaces can contain a variable with the same name and there maybe a chance of variable naming conflicts but we can solve this problem by using interface names.
 
 ```
 interface Left{
@@ -177,9 +178,11 @@ class Test implements Left,Right{
 ```
 
 **Marker interfaces** :
+
 1. It is an interface with no methods, no fields and it is completely empty.
 2. It purpose is to provide metadata/info to JVM compiler of frameworks.
 3. Examples of some marker interfaces:
+
 ```
     a. Serializable(I).
     b. Cloneable(I).
@@ -191,11 +194,13 @@ class Test implements Left,Right{
 6. It is possible to create our own interfaces but for that customization of JVM is required.
 
 **Adapter class** :
+
 1. Adapter class is a simple java class that implements an interface with empty method implementation.
 2. Adapter classes are mainly used with event handling and listener interfaces.
 3. The main advantages of Adapter classes is - Instead of implementing all methods of an interface directly, we can extend the adapter class and override the required methods.
 4. Adapter classes reduce programming complexity and improve readability.
 5. It is used commonly used in AWT event handling
+
 ```
 class MyAdapter extends WindowAdapter{
     public void windowClosing(WindowEvent e){
