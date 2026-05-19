@@ -7,7 +7,10 @@
 
 **break** :
 
+A flow control statement used to immediately terminate a loop or switch statement, when compilier encounters a break it stops executing the current block and jumps to the first line of code directly following that block.
+
 We can use break statement in the following places.
+
 1. inside switch to stop fall-through
 
 ```
