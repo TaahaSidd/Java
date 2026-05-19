@@ -9,11 +9,13 @@
 5. Every interfaces method is always public and abstract whether we are declaring or not hence whenever we are implementing an interface method compulsory we should declare as public otherwise we will get compile time error.
 
 **Extends VS Implements** :
+
 1. A class can extends only one class at a time
 2. An interfaces can extends any number of interfaces simultaneously
+
 ```
 interface A{
-    
+
 }
 
 interface B{
@@ -26,6 +28,7 @@ interface C extends A,B{
 ```
 3. A class can implement any number of interfaces simultaneously.
 4. A class can extends another class and can implements any number of interfaces simultaneously.
+
 ```
 class A extends B implements C, D, E{
 
@@ -33,9 +36,11 @@ class A extends B implements C, D, E{
 ```
 
 **Interfaces methods** :
+
 1. Every method present inside interfaces is always public and abstract whether we declare it or not.
 2. Interfaces methods are defined public so that the method is available to every implementation class. and it is abstract because implementation class is responsible to provide implementation.
 3. The following method declarations are equal:
+
 ```
 void m1();
 
@@ -47,8 +52,10 @@ public abstract void m1();
 ```
 
 **Interface variables** :
+
 1. Interface can contain variables the main purpose of interfaces variables is to define requirement level constants.
 2. Every interface variable is public static final whether we are declaring or not.
+
 ```
 interface interf
 {
@@ -63,6 +70,7 @@ x variable is final because if one implementation class can change value then it
 ```
 
 3. As every interface variable is always public static we cant declare with the following modifiers:
+
 ```
 private
 
@@ -74,6 +82,7 @@ volatile
 
 ```
 4. For interface variable compulsory we should perform initialization at the time of declaration otherwise we will get compile time error.
+
 ```
 interface interf{
     int x;
@@ -96,6 +105,7 @@ class test implements interf{
 **Interface naming conflicts** :
 
 1. If two interfaces contains a method with same signature and same return type then in the implementation class we have to provide implementation for only one method
+
 ```
 interface left{
     public void m1();
@@ -112,6 +122,7 @@ class test implements left,right{
 }
 ```
 2. If two interface contains a method with same name but different argument types then in the implementation class we have to provide implementation for both methods and these methods acts overloaded methods.
+
 ```
 interface Left{
     public void m1();
@@ -131,6 +142,7 @@ class test implements Left,Right{
 ```
 
 3. If two interfaces contains a method with same signature but different return types then it is impossible to implement both interfaces simultaneously (if return types are not co-variant).
+
 ```
 interface Left{
     public void m1();
@@ -144,6 +156,7 @@ interface Right{
 **Interface variable naming conflicts** :
 
 1. Two interfaces can contain a variable with the same name and there maybe a chance of variable naming conflicts but we can solve this problem by using interface names.
+
 ```
 interface Left{
     int x = 100;
@@ -161,4 +174,5 @@ class Test implements Left,Right{
         Sop(Right.x); -> VALID
     }
 }
+```
 
