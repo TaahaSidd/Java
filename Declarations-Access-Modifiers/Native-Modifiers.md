@@ -1,11 +1,41 @@
 # Part - 10 - Native, Static, Transient Modifiers.
 
 **Native Modifiers**:
+
 1. native is a modifier that is only applicable to methods and we cant apply it anywhere else.
 2. The methods which are implemented in non java (mostly C/C++) are called native methods or Foreign methods.
 3. The main objectives of native keyword are to improve performance of the system, to achieve machine level or memory level communication, to use already existing legacy non java code.
+4. For native methods implementation is already available in their native languages and we are not responsible to provide implementation hence native method declaration should ends with ;
+
+```
+public native void m1(); -> VALID
+
+public native void m1(){
+
+} -> INVALID
+```
+5. native and abstract combinations is illegal.
+6. We cant declare native method as strictfp.
+7. The main advantage of native method is performance will be improved but the main disadvantages it break platform independent nature of java language.
 
 **Pseudo code to use native keyword in java** :
+
 1. Load native libraries.
 2. Declare a native method.
 3. Invoke a native method.
+
+**transient Modifier** :
+
+1. It is a modifier only applicable for variables.
+2. We can use transient keyword in serialization context.
+3. At the time of serialization if we don't want to save the value of a particular variable to meet security constraint then we should declare that variable as transient.
+4. At the time of serialization JVM ignores the original value of transient variables and saves default values to the file.
+5. Transient means not to serialize.
+
+**volatile Modifier** :
+
+1. It is only applicable only for variables.
+2. If a value of a variable keep on changing by multiple threads then there may be a chance of data insistency problem we can solve this problem by using volatile modifier.
+3. If a variable is declared as volatile then for every thread JVM will create a separate local copy, every modifications perfomed by the thread will take place in local copy so that the original copy doesn't get affected.
+4. The main advantage keyword is we can overcome data inconsistency problem but the main disadvantage of volatile keyword is creating and maintaining a separate copy for every thread increases complexity and create performance problems.
+5. It is never recommended volatile keyword if theres no specific requirement and it is almost deprecated.
