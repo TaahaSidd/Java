@@ -176,3 +176,30 @@ class Test implements Left,Right{
 }
 ```
 
+**Marker interfaces** :
+1. It is an interface with no methods, no fields and it is completely empty.
+2. It purpose is to provide metadata/info to JVM compiler of frameworks.
+3. Examples of some marker interfaces:
+```
+    a. Serializable(I).
+    b. Cloneable(I).
+    c. RandomAccess(I).
+    d. SingleThreadModel(I).
+```
+4. Marker interfaces are also known as Ability interface or Tag interface.
+5. Internally JVM is responsible to provide ability, it is done to reduce complexity of programming.
+6. It is possible to create our own interfaces but for that customization of JVM is required.
+
+**Adapter class** :
+1. Adapter class is a simple java class that implements an interface with empty method implementation.
+2. Adapter classes are mainly used with event handling and listener interfaces.
+3. The main advantages of Adapter classes is - Instead of implementing all methods of an interface directly, we can extend the adapter class and override the required methods.
+4. Adapter classes reduce programming complexity and improve readability.
+5. It is used commonly used in AWT event handling
+```
+class MyAdapter extends WindowAdapter{
+    public void windowClosing(WindowEvent e){
+        Sop("Closing");
+    }
+}
+```
