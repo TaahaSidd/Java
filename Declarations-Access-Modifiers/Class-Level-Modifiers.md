@@ -128,6 +128,7 @@ eg -
 
         We will get compile time error -> cannot inherit from final p class.
     ```
+
     3. Every method present in final class is always final by default but every variable present inside final class is not final.
     4. The main advantage of final keyword is we can achieve security and we can provide unique implementation, but the main disadvantage of final keyword is we are missing key benefits of OOPs (inheritance, polymorphism) if theres no specific requirement  then its not recommended to use final keyword.
    
@@ -146,6 +147,7 @@ eg -
 
         } -> INVALID
     ```
+    
     2. Child class is responsible to provide implementation for parent class abstract methods.
     3. By declaring abstract method in parent class we can provide guidelines to child classes such that which methods are compulsory child has to implement.
     4. Abstract method never talks about implementation if any modifiers talk about implementation then it forms illegal combination with abstract modifiers, the following are illegal combinations of modifiers for method with respect to abstract.
