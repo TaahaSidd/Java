@@ -2,7 +2,7 @@
 
 **Java Source file structure** :
 
-A java program can contain any number of classes but at most one top-level public class is allowed per source file, if there iss a public class then name of the program and name of the public class must be the same otherwise we will get compile time error :
+A java program can contain any number of classes but at most one top-level public class is allowed per source file, if there is a public class then name of the program and name of the public class must be the same otherwise we will get compile time error :
 
 ```
 eg  -
