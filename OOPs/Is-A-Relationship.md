@@ -1,8 +1,10 @@
 # Part - 2, 3 - Is A Relationship & Has A Relationship.
 
 **Is-A relationship** :
+
 1. It is also known as inheritance.
 2. Whenever one class inherits another class, it is called IS-A relationship.
+
 ```
 class P{
     
@@ -29,6 +31,7 @@ class C extends P{
 ![alt text](../Images/IS-A.png)
 
 **Multiple inheritance** :
+
 1. A java class can't extend more than one class at a time, hence java wont provide support for multiple inheritance in class
 ```
 class A extends B,C{
@@ -49,6 +52,7 @@ class A extends B,C{
 ![alt text](../Images/Ambiguity.png)
 
 5. Cyclic inheritance is not allowed and its not required in java.
+
 ```
 class A extends A{
 
