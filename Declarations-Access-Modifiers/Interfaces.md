@@ -208,3 +208,9 @@ class MyAdapter extends WindowAdapter{
     }
 }
 ```
+
+**interfaces Vs abstract class Vs concrete class** :
+1. If we don't know anything about implementation, just we have requirement specification then we should go for interface.
+2. If we are talking about implementation but not completely (partial implementation) then we should go for abstract class.
+3. If we are talking about implementation completely and ready to provide service then we should go for concrete class.
+
