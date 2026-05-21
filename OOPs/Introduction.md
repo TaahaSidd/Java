@@ -1,4 +1,4 @@
-# Part - 1, - Introduction
+# Part - 1 - Introduction
 
 **OOPs** :
 
@@ -6,9 +6,11 @@
 2. If focuses on designing software that closely represent real-world entities.
 
 **Data Hiding** :
+
 1. It is a technique used to restrict direct access to an object's internal state, ensuring the data can be accessed from or modified through authorized methods.
 2. By declaring member(variable) as private we can achieve data hiding.
 3. Primary goal is to enhance security and data integrity.
+
 ```
 public class Account{
     
@@ -23,12 +25,14 @@ public class Account{
 2. It is highly recommended a variable as private.
 
 **Abstraction** :
+
 1. It is a process of hiding internal implementation details while showing only the essential features of an object to the user.
 2. It focuses on what an object does rather than how it does it.
 3. It reduces complexity and improvise maintainability.
 4. By using interfaces and abstract classes we can implement abstraction.
 
 **Encapsulation** :
+
 1. The process of biding data and corresponding methods into a single unit is called encapsulation.
 2. It restricts direct access by hiding implementation details. This ensures controlled interaction with the data.
 3. It is achieved by using access modifiers like private, protected and public.
