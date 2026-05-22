@@ -1,5 +1,10 @@
 # Part - 2, 3 - Imports and different types.
 
+**Import Statements** :
+
+1. Import statements in java is helpful to take a class or all classes visible for a program specified under a package, with the help of a single statement.
+2. It is used to bring classes, interfaces, or entire packages into your code space.
+
 **Types of import statements** :
 
 1. Explicit Class Import
@@ -57,7 +62,7 @@ java.util.ArrayList list = new java.util.ArrayList();
 **Diff b/w C lang #include and java lang import statement** :
 
 1. in the case of C lang #include all input output header files will be loaded at the beginning only (at translation time) hence it is static include.
-2. But in the case of java import statements no .class file will be loaded at the beginning, whenever we are using a particular class then only corresponding .class file will be loaded this is like dynamic include or load on demand or load fly
+2. But in the case of java import statements no .class file will be loaded at the beginning, whenever we are using a particular class then only corresponding .class file will be loaded this is like dynamic include or load on demand or load fly.
 
 **Static imports** :
 
