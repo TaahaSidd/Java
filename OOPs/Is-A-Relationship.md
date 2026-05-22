@@ -68,3 +68,41 @@ class B extends A{
 ```
 
 **Has-A Relationship** :
+1. It is also known as Composition or Aggregation.
+2. Occurs when a class uses an instance of another class as member variable.
+```
+class Car{
+    Engine e = new Engine();
+}
+
+class Engine{
+
+    //functionality
+}
+
+Car Has-A Engine reference
+```
+
+**Composition** :
+1. Also known as Strong Bonding.
+2. The child object cannot exist without the parent object.
+```
+Eg - a Car HAS-A Engine. If the car is destroyed, the engine is also gone.
+```
+
+**Aggregation** :
+1. Also known as Weak Bonding.
+2. Both entities can exist independently.
+```
+Eg - Library HAS-A Student. If the library closes, the student still exists.
+```
+
+**Overloading** :
+1. Method overloading in java allows a class to have multiple methods with the same name but different parameters
+```
+a1(int i);
+
+a1(long l);
+
+a1(float f);
+```
