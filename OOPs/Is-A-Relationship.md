@@ -132,3 +132,41 @@ public static void main(String[] args){
     t.m1(null); -> O/P - String Method - we are getting here string because string is a child class for object.
 }
 ```
+
+**Different ways to achieve method overloading** :
+1. Changing the number of parameters: Method overloading can be achieved by changing the number of parameters when passing to different methods
+```
+class Product{
+    public int sum(int i, int j){
+        
+    }
+    
+    public int sum(int i, int j, int k){
+
+    }
+}
+```
+2. Changing Data types of parameters: Methods can be considered overloaded if they have the same name but have different parameter types.
+```
+class Product{
+    public int sum(int a, int b){
+        
+    }
+    
+    public double sum(double a, double b){
+        
+    }
+}
+```
+3. Changing the order of parameters: Method overloading can be achieved by rearranging the parameters of two or more overloaded methods.
+```
+class Product{
+    public int sum(int i, int j){
+        
+    }
+
+    public int sum(int j, int i){
+        
+    }
+}
+```
