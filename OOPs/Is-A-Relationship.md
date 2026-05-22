@@ -106,3 +106,29 @@ a1(long l);
 
 a1(float f);
 ```
+
+**Case 1** - While resolving overloaded method if exact match method is not available then we wont get any compile time error, 1st the argument will be promoted to next level and check wether matched method is available or not. If match method is available then it will be considered and if the matched method is not available then compiler promotes argument once again to the next level this process will be continued until all possible promotions.
+
+**Case 2** -
+```
+class Test{
+    public void m1(String s){
+        Sop("String Method");
+    }
+    public void m1(Object o){
+        Sop("Object Method");
+    }
+}
+
+And when we call these methods
+
+public static void main(String[] args){
+    Test t = new Test();
+
+    t.m1(new Object()); -> O/P - Object Method
+    
+    t.m1("durga"); -> O/P - String Method
+    
+    t.m1(null); -> O/P - String Method - we are getting here string because string is a child class for object.
+}
+```
