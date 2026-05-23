@@ -1,6 +1,7 @@
 # Part - 5 - Overriding
 
 **Overriding** :
+
 1. It allows a subclass to provide a specific implementation of method that is already defined in its parent class.
 2. One of the key feature of runtime polymorphism in OOPs.
 3. It is achieved when child and parent classes have methods with same signature.
@@ -27,6 +28,7 @@ class Dog extends Animal{
 }
 ```
 **Rules for Method overriding** :
+
 1. Name, parameters and return type must match the parent method.
 2. Java picks which method to run at runtime, based on the actual object type, not just the reference variable type.
 3. Static methods cannot be overridden.
@@ -138,3 +140,20 @@ class Child extends Parent{
         }
    }
    ```
+
+
+**Method Hiding** :
+
+1. If a subclass is defines a static method with the same signature as a static method in the superclass, then the method in the subclass hides the one in superclass.
+2. This mechanism happens because the static method is resolved at the compile time.
+3. Static method bind during the compile time using the type of reference not a type of object.
+
+**Differences B/W Method Overriding and Method hiding** :
+
+1. In method overriding both the method parent class and child class are non-static.
+2. In method hiding both the method parent class and child class are static.
+3. In method overriding method resolution is done on the basis of the Object type.
+4. In method hiding method resolution is done on the basis of the reference type.
+5. The version of the overridden instance method that gets invoked is the one in the subclass.
+6. The version of the hidden static method that gets invoked depends on whether its invoked from the superclass or the subclass.
+7. In method overriding, we have the ability to use the "super" keyword to explicitly access superclass methods (super keyword is non-static reference variable we cant use it in static method as we know static methods can only access static members of the class ). Therefore, method overriding does not involve method hiding since the "super" keyword allows us to access and invoke superclass methods when needed.
