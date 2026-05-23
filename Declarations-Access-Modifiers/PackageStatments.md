@@ -5,21 +5,21 @@
 1. It is an encapsulation mechanism to group related classes and interfaces into a single unit called package.
 
 ```
-eg 1 - All classes and interfaces which are required database operations are grouped into a single package which is nothing but java.sql package
+eg 1 - All classes and interfaces which are required database operations are grouped into a single package which is nothing but java.sql package.
 
-eg 2 - All classes and interfaces which are useful for file input output (io) operations are grouped into a separate package which is -> java.io package
+eg 2 - All classes and interfaces which are useful for file input output (io) operations are grouped into a separate package which is -> java.io package.
 
 ```
 2. The main advantage of packages are :
 
 ```
-    a. To resolve naming conflicts(unique identification of components)
+    a. To resolve naming conflicts(unique identification of components).
     b. It improves modularity of the application.
     c. It improves maintainability of the application.
     d. It provides security for our components.
     e. Packages provide namespace management.
 ```
-3. Theres one universally accepted naming convention for packages that is to use internet domain name in reverse, and packages name are usually written in lowercase characters.
+3. There's one universally accepted naming convention for packages that is to use internet domain name in reverse, and packages name are usually written in lowercase characters.
 
 ```
 eg - com.icicibank.loan.housing.Account
@@ -32,7 +32,7 @@ Account -> class name.
 
 **Conclusion** :
 
-1. In any java source file there can be at most one package statement i.e more than one package statement is not allowed otherwise we will get compile time error
+1. In any java source file there can be at most one package statement i.e more than one package statement is not allowed otherwise we will get compile time error.
 
 ```
 package pack1;
@@ -43,7 +43,7 @@ public class A {
 }
 ```
 
-2. In any java program the first non-comment statement should be package statement (if its available) otherwise we will get compile time error
+2. In any java program the first non-comment statement should be package statement (if its available) otherwise we will get compile time error.
 
 ```
 
@@ -55,7 +55,7 @@ public class A{
 }
 ```
 
-3. the following is valid java source file structure:
+3. The following is valid java source file structure:
 
 ```
 eg -
@@ -75,7 +75,7 @@ eg -
 3. Package structure and directory structure must match.
 
 ```
-package com.durga.test
+package com.durga.test;
 
 com/durga/test/
 ```
