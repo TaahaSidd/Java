@@ -42,3 +42,13 @@ O/P -> I am Father - The person class has a method role() that prints a general 
 ```
 
 **Types of polymorphism** :
+
+1. Compile-time polymorphism :
+    1. It is also known as static polymorphism, it is achieved mainly through method overloading.
+    2. The method to be called is resolved by the compiler at compile time.
+
+2. Run-time polymorphism :
+   1. Is also known as dynamic method dispatch.
+   2. It occurs when a method call is resolved at runtime, and its achieved using method overriding.
+
+![alt text](../Images/Types-of-Poly.png)
