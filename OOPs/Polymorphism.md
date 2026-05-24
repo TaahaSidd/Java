@@ -40,3 +40,5 @@ public class main{
 
 O/P -> I am Father - The person class has a method role() that prints a general message. The father class overrides role() to print a specific message. The reference of type person is used to point to an object of type father , demonstrating runtime polymorphism.
 ```
+
+**Types of polymorphism** :
