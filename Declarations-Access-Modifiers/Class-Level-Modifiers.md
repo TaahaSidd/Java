@@ -27,12 +27,12 @@ But for inner class the applicable modifiers are:
     b. <default>
     c. final
     d. abstract
-    e. Strictfp
+    e. strictfp
     f. private
     g. protected
     h. static
 ```
-4. If we try to any non applicable modifiers on top-level classes we will get error.
+4. If we try to use any non-applicable modifier on top-level classes we will get compile time error.
 
 ```
     private class Test{
@@ -126,11 +126,25 @@ eg -
 
         }
 
-        We will get compile time error -> cannot inherit from final p class.
+        We will get compile time error -> cannot inherit from final class p.
     ```
 
-    3. Every method present in final class is always final by default but every variable present inside final class is not final.
+    3. In a final class methods cannot be overridden because child class creation itself is not possible, but every variable present inside final class is not final.
     4. The main advantage of final keyword is we can achieve security and we can provide unique implementation, but the main disadvantage of final keyword is we are missing key benefits of OOPs (inheritance, polymorphism) if theres no specific requirement  then its not recommended to use final keyword.
+
+    **Final variables** :
+    1. Once assigned, its value cannot be changed.
+    2. For primitive the value cannot change.
+    3. For reference variable, reference cannot change but object contents can change.
+    
+    ```
+    final int x = 10;
+    x = 20; -> Compile time error.
+    
+    final ArrayList l = new ArrayList();
+    l.add("A"); -> VALID
+    l = new ArrayList(); -> INVALID
+    ```
    
 **Abstract Modifiers** :
 
@@ -138,7 +152,7 @@ eg -
    
    **Abstract Method** :
 
-    1. Even though we don't know about implementation still we can declare a method with abstract modifier i.e for abstract methods only declarations is available but not implementation hence abstract method and declaration should end with ";".
+    1. Even though we don't know about implementation still we can declare a method with abstract modifier i.e for abstract methods only declarations is available but not implementation hence abstract method abstract method contain only declaration and no implementation, hence they end with ";".
     
     ```
     eg -
@@ -162,20 +176,52 @@ eg -
 
         all of these modifiers cannot be used with abstract. and if we try to use them with abstract we will get Compile time error -> illegal combination of modifier.
     ```
+    5. If child class does not implement, then compile-time error occurs unless child is also abstract.
 
     **Abstract Class** :
     
-    1. For any java class if we are not allowed to create an object (partial implementation) such type of class we have to declare with abstract modifier.
-    2. For abstract classes instantiation is not possible.
+    6. For any java class if we are not allowed to create an object (partial implementation) such type of class we have to declare with abstract modifier.
+    7. For abstract classes instantiation is not possible.
 
     **Abstract class VS Abstract method** :
 
-    1. If a class contains al least one abstract method then compulsory we should declare class as abstract otherwise we will get compile time error.
+    8. If a class contains at least one abstract method then compulsory we should declare class as abstract otherwise we will get compile time error.
         
          **Reason** - IF a class contains at least 1 abstract method then implementation is not complete and hence it is not recommended to create object, to restrict object instantiation compulsory we should declare class as abstract.
     
-    2. Even though class doesn't contain any abstract method still we can declare class as abstract if we don't want instantiation i.e abstract class can contain 0 number of abstract methods also.
-    3. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to declare child class as abstract.
+    9. Even though class doesn't contain any abstract method still we can declare class as abstract if we don't want instantiation i.e abstract class can contain 0 number of abstract methods also.
+    10. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to declare child class as abstract.
+    11. Abstract class can contain :
+       
+        a. abstract methods.
+       
+        b. concrete methods.
+       
+        c. constructor.
+       
+        d. variables.
+       
+        e. static methods.
+       
+        f. final methods.
+        
+        ```
+        abstract class Test{
+            Test(){
+                Sop("Constructor");
+            }
+            
+            final void m1(){
+                Sop("final method");
+            }
+            
+            static void m2(){
+                Sop("static method");
+            }
+            
+            abstract void m3();
+        }
+        ```
 
 **Final VS Abstract** :
 
@@ -196,3 +242,24 @@ final class Test{
 } -> INVALID
 
 ```
+
+**Missing Modifier Combination Rule** :
+
+Illegal Modifier combinations for class
+
+```
+final abstract class Test{
+
+}
+
+INVALID because :
+abstract -> child class required.
+final -> child class not allowed.
+```
+
+**Constructors cannot be abstract** :
+
+1. Constructor is used for object initialization.
+2. Abstract methods are incomplete methods.
+3. Constructors can never be overridden.
+
