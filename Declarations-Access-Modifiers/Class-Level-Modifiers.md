@@ -18,7 +18,7 @@
     b. <default>
     c. final
     d. abstract
-    e. Strictfp
+    e. strictfp
 ```
 But for inner class the applicable modifiers are:
 
@@ -133,6 +133,7 @@ eg -
     4. The main advantage of final keyword is we can achieve security and we can provide unique implementation, but the main disadvantage of final keyword is we are missing key benefits of OOPs (inheritance, polymorphism) if theres no specific requirement  then its not recommended to use final keyword.
 
     **Final variables** :
+
     1. Once assigned, its value cannot be changed.
     2. For primitive the value cannot change.
     3. For reference variable, reference cannot change but object contents can change.
@@ -180,18 +181,18 @@ eg -
 
     **Abstract Class** :
     
-    6. For any java class if we are not allowed to create an object (partial implementation) such type of class we have to declare with abstract modifier.
-    7. For abstract classes instantiation is not possible.
+    1. For any java class if we are not allowed to create an object (partial implementation) such type of class we have to declare with abstract modifier.
+    2. For abstract classes instantiation is not possible.
 
     **Abstract class VS Abstract method** :
 
-    8. If a class contains at least one abstract method then compulsory we should declare class as abstract otherwise we will get compile time error.
+    1. If a class contains at least one abstract method then compulsory we should declare class as abstract otherwise we will get compile time error.
         
          **Reason** - IF a class contains at least 1 abstract method then implementation is not complete and hence it is not recommended to create object, to restrict object instantiation compulsory we should declare class as abstract.
     
-    9. Even though class doesn't contain any abstract method still we can declare class as abstract if we don't want instantiation i.e abstract class can contain 0 number of abstract methods also.
-    10. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to declare child class as abstract.
-    11. Abstract class can contain :
+    2. Even though class doesn't contain any abstract method still we can declare class as abstract if we don't want instantiation i.e abstract class can contain 0 number of abstract methods also.
+    3. If we are extending abstract class then for each and every abstract method of parent class child class should provide implementation otherwise we have to declare child class as abstract.
+    4. Abstract class can contain :
        
         a. abstract methods.
        
