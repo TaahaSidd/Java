@@ -1,4 +1,4 @@
-# Part - 8 - Coupling
+# Part - 8, 9 - Coupling
 
 **Coupling** :
 
@@ -63,7 +63,11 @@ Runnable r = new Thread();
 
 **Class type casting** :
 
-Typecasting is the assessment of the value of one primitive data type to another type. In java , there are two types of casting
+1. Typecasting is the assessment of the value of one primitive data type to another type. In java , there are two types of casting
+2. Through typecasting we are not creating any new object.
+3. For the existing object we are providing another type of reference variable.
+
+![alt text](../Images/TypeCasting.png)
 
 **Upcasting :**
 
@@ -88,3 +92,5 @@ Child c = (Child) p;
 
 Dog mydog = (Dog) myAnimal; //Downcasting
 ````
+
+
