@@ -28,6 +28,7 @@ class Test{
 }
 
 Variable x might not have been initialize.
+
 ```
 5. The following are various places for initialization of final instance variable:
 
@@ -67,7 +68,7 @@ Variable x might not have been initialize.
 
 ```
 class test{
-    Static int x;
+    static int x;
 
     public static void main(String[] args){
         Sop(x); -> OUTPUT 0
@@ -135,3 +136,29 @@ class Test{
 
 1. Formal parameters of a method simply acts as local variables of that method hence formal parameters can be declared as final.
 2. If formal parameters declared as final then within the method we cant perform reassignment
+
+**Final Reference Variable** :
+1. final reference means assignment not allowed.
+2. Object mutation may still be allowed.
+3. final reference variables means reassignment is not possible, but internal object state may still change.
+
+```
+final ArrayList l = new ArrayList();
+l.add(10); -> VALID
+```
+
+**Different Table** :
+
+```
+final variable -> value cannot change.
+final method -> overriding not allowed.
+final class -> inheritance not allowed.
+```
+
+**Blank final Variable** :
+
+Blank final variable -> final variable declared without initialization.
+
+```
+final int x;
+```
