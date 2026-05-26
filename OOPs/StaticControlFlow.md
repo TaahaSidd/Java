@@ -14,6 +14,20 @@
 **Direct and Indirect Reference** :
 
 1. If we try to read and display the value of a variable inside the static block, that read operation is called a direct read. If we call a method from a static block, and within that method if we are trying to read a variable that read operation is called indirect read.
+```
+class Test{
+    static int i = 10;
+
+    static{
+        m1();
+        Sop(i); -> Direct Read
+    }
+
+    public static void main(String[] args){
+        Sop(i); -> Indirect Read
+    }
+}
+```
 2. If a variable is identified by the JVM and not yet initialized by its original value. In that case the variable is said to be Read Indirectly Write Only (RIWO) state.
 
 **RIWO state** :
