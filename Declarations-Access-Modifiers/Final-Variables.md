@@ -30,6 +30,7 @@ class Test{
 Variable x might not have been initialize.
 
 ```
+
 5. The following are various places for initialization of final instance variable:
 
 ```
