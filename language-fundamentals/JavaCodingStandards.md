@@ -7,7 +7,7 @@ Identifiers should clearly represent the functionality or responsibility of comp
 
 1. Usually class names are nouns
 2. They follow PascalCase naming convention.
-
+```
     eg -
 
         StringBuffer
@@ -15,6 +15,7 @@ Identifiers should clearly represent the functionality or responsibility of comp
          Student
          
          ArrayList
+```
 
 **Coding Standards for Interfaces** :
 
@@ -25,8 +26,10 @@ Identifiers should clearly represent the functionality or responsibility of comp
 
 1. Usually methods names are verbs or verb-noun combinations.
 2. Should starts with lowercase character and if it contains multiple words then inner word should be uppercase(camel case convention)
-   
+
+```
    eg - addSum();
+```
 
 **Coding Standards for Variables** :
 
@@ -37,9 +40,11 @@ Identifiers should clearly represent the functionality or responsibility of comp
 
 1. Usually constant names are nouns
 2. Should contain only uppercase characters and if it contains multiple words then these words are separated with ( _ ).
-    
+
+```
     eg- MAX_VALUE
         MIN_VALUE
+```
 
 **Coding Standards for Java Bean** :
 
@@ -67,6 +72,7 @@ Identifiers should clearly represent the functionality or responsibility of comp
 2. the return type should be void, because setter methods generally returns nothing.
 3. the method name should prefixed with "set"
 4. it should take some arguments i.e it should take one arguments
+
 ```
    eg - setName(String name);
 ```
