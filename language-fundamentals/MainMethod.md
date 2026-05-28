@@ -5,7 +5,8 @@ JVM start program execution from main() method.
 Wether class contains main() or not and whether main() is declared according to required prototyp or not these things wont be checked by compiler. This is the responsibility of JVM, if JVM isn't able to find these then we get runtime exception -> NoSuchMethodError : main
 
 At runtime JVM always searches for main() with the following prototype;
-    ![alt text](JVMReqs.png)
+
+![alt text](../Images/JVMReqs.png)
 
 The above syntax is very strict and if we perform any change then we will get Runtime Exception -> NoSuchMethodError
 
