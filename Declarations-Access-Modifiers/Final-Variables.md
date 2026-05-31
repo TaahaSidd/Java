@@ -6,7 +6,7 @@ A variable that can be assigned a value exactly once. Once assigned its value ca
 
 **Final instance variables** :
 
-1. if the value of a variable is varied from object to object such type of variables are called instance variables.
+1. If the value of a variable is varied from object to object such type of variables are called instance variables.
 2. For every object a separate copy of instance variable will be created.
 3. For instance variable we are not required to perform initialization explicitly JVM will always provide default values.
 
@@ -121,7 +121,7 @@ class Test{
     }
 } O/P -> HELLO
 ```
-6. The only applicable modifiers for local variable is final and if we try to use any other modifiers then we will get Compile time error.
+6. The only applicable modifiers for local variable is **final** and if we try to use any other modifiers then we will get Compile time error.
 
 ```
 class Test{
@@ -139,6 +139,7 @@ class Test{
 2. If formal parameters declared as final then within the method we cant perform reassignment
 
 **Final Reference Variable** :
+
 1. final reference means assignment not allowed.
 2. Object mutation may still be allowed.
 3. final reference variables means reassignment is not possible, but internal object state may still change.
