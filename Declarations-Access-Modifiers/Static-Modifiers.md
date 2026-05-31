@@ -57,6 +57,10 @@ class C extends P{
     }
 }
 ```
+**Static VS Non Static** :
+
+![alt text](../Images/Static-NonStatic.png)
+
 
 **Synchronized modifiers** :
 
