@@ -1,1 +1,1 @@
-# DurgaSoft - Core Java full course notes.
+# DurgaSoft - Core Java full Course Notes.
