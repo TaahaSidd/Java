@@ -1,4 +1,4 @@
-# Part - 3 - Checked and Unchecked Exceptions
+# Part - 3-A - Checked and Unchecked Exceptions
 
 **Checked Exceptions** :
 1. These exceptions are checked at compile time, forcing the programmer to handle them explicitly.
