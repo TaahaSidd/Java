@@ -14,9 +14,18 @@ public native void m1(){
 
 } -> INVALID
 ```
-5. native and abstract combinations is illegal.
+
+5. native and abstract combinations is illegal. abstract -> Java provides implementation later, native -> Implementation already exists in its native language.
 6. We cant declare native method as strictfp.
 7. The main advantage of native method is performance will be improved but the main disadvantages it break platform independent nature of java language.
+
+```
+Common examples of native method
+
+1. System.arraycopy()
+2. Thread.start0()
+3. Object.hashCode()
+```
 
 **Pseudo code to use native keyword in java** :
 
@@ -31,11 +40,18 @@ public native void m1(){
 3. At the time of serialization if we don't want to save the value of a particular variable to meet security constraint then we should declare that variable as transient.
 4. At the time of serialization JVM ignores the original value of transient variables and saves default values to the file.
 5. Transient means not to serialize.
+6. Transient is only used when class implements, Without serialization, transient has no effect.
+
+```
+implements Serializable
+```
 
 **volatile Modifier** :
 
 1. It is only applicable only for variables.
 2. If a value of a variable keep on changing by multiple threads then there may be a chance of data insistency problem we can solve this problem by using volatile modifier.
-3. If a variable is declared as volatile then for every thread JVM will create a separate local copy, every modifications perfomed by the thread will take place in local copy so that the original copy doesn't get affected.
+3. If a variable is declared as volatile then for every thread JVM will create a separate local copy, every modifications performed by the thread will take place in local copy so that the original copy doesn't get affected.
 4. The main advantage keyword is we can overcome data inconsistency problem but the main disadvantage of volatile keyword is creating and maintaining a separate copy for every thread increases complexity and create performance problems.
 5. It is never recommended volatile keyword if theres no specific requirement and it is almost deprecated.
+6. All threads share main memory, But threads may cache values locally.
+7. ```volatile``` ensures every read/write happens from main memory.
