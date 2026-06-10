@@ -2,7 +2,7 @@
 
 **Threads** :
 
-A thread is the smallest unit of execution within program. It is a lightweight subprocess that runs independently but shares the same memory space as the process, allowing multiple tasks to execute concurenntly.
+A thread is the smallest unit of execution within program. It is a lightweight subprocess that runs independently but shares the same memory space as the process, allowing multiple tasks to execute concurrently.
 
 **Ways to create thread**:
 
@@ -89,7 +89,7 @@ Java uses priorities from 1 to 10.
 3. ```MAX_PRIORITY = 10```
 
 A thread's priority can be changed using ```setPriority()```.
-Higher priority threads are generally preffered, but java doesn't gurantee that a higher-priority thread will always run first.
+Higher priority threads are generally preferred, but java doesn't guarantee that a higher-priority thread will always run first.
 
 **Scheduling types** :
 1. Preemptive scheduling: A running thrrad can be be paused so another thread can run.
@@ -144,7 +144,7 @@ The lifecycle of a thread in java defines the various states a thread goes throu
 
 1. A thread passes through multiple states during execution.
 2. The thread scheduler controls state transitions.
-3. Helps in efficent thread managment and debugging.
+3. Helps in efficient thread management and debugging.
 
 ![alt text](../Images/thread-diagram.png)
 
