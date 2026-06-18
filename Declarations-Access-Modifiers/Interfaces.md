@@ -3,10 +3,24 @@
 **Introduction** :
 
 1. It is a blueprint that defines a set of methods a class must implement without providing full implementation details.
-2. Inside interface every method is always abstract whether we are declaring or not hence interface is considered 100% pure abstract class.
+2. Inside interface every method is always abstract whether we are declaring or not hence interface is considered 100% pure abstract class. (Only till java 8, after java 8 abstract is no longer 100% abstract).
 3. Any service requirement specification (SRS) is considered as interfaces.
 4. Whenever we are implementing an interfaces for each and every method of that interfaces we have to provide implementation otherwise we have to declare class as abstract, then next level child class is responsible to provide implementation.
 5. Every interfaces method is always public and abstract whether we are declaring or not hence whenever we are implementing an interface method compulsory we should declare as public otherwise we will get compile time error.
+6. Interface methods cannot be final.
+
+```
+Because :
+
+abstract -> child must implement.
+final -> child cannot override.
+
+Hence : 
+
+final abstract void m1();
+
+Illegal
+```
 
 **Extends VS Implements** :
 
@@ -101,6 +115,7 @@ class test implements interf{
     }
 }
 ```
+6. Inteface variables are constants, compiler treats them as ```public static int x =10;```
 
 **Interface naming conflicts** :
 
@@ -187,8 +202,8 @@ class Test implements Left,Right{
     a. Serializable(I).
     b. Cloneable(I).
     c. RandomAccess(I).
-    d. SingleThreadModel(I).
 ```
+
 4. Marker interfaces are also known as Ability interface or Tag interface.
 5. Internally JVM is responsible to provide ability, it is done to reduce complexity of programming.
 6. It is possible to create our own interfaces but for that customization of JVM is required.
